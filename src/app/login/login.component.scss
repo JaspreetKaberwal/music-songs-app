@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Baskervville&display=swap');
+
+button:focus {
+    outline: none;
+}
+input:focus {
+    outline: none;
+    border:1px solid black;
+}
+.wrapper{
+    // font-family: 'Baskervville', serif;
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+}
+.head-image{
+    width: 700px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form input{
+    margin:10px 0px;
+    padding:10px;
+}
+
+.form .buttons{
+    margin-top:30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.form .buttons button{
+    background-color: black;
+    color:white;
+    font-size: 20px;
+    border:none;
+    width:150px;
+    padding:10px 10px;
+}

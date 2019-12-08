@@ -1,0 +1,12 @@
+<div class="wrapper">
+    <img class="head-image" src="assets/login.png"/>
+    <div class="form">
+        <h1>Login to amazing music</h1>
+        <input [(ngModel)]="username" type="text" placeholder="Username"/>
+        <input [(ngModel)]="password" type="password" placeholder="Password"/>
+        <div class="buttons">
+            <button (click)="login()">Login</button>
+            <button (click)="signUp()">Signup</button>
+        </div>
+    </div>
+</div>

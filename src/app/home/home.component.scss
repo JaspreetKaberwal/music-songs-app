@@ -1,0 +1,150 @@
+.modal{
+    display: flex;
+    width: 100%;
+    height:100vh;
+    background-color: rgb(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .container{
+    width: 50%;
+    background-color: white;
+    padding: 20px;
+}
+input{
+    margin:10px 0px;
+    padding:10px;
+    display: block;
+    width: 100%;
+}
+
+button:focus {
+    outline: none;
+}
+input:focus {
+    outline: none;
+    border:1px solid black;
+}
+
+.add-song{
+    background-color: black;
+    color: white;
+    position: fixed;
+    width: 140px;
+    height:  70px;
+    font-size: 20px;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    border-radius: 10%;
+}
+
+.add-song-modal{
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+}
+
+.all-playlists{
+    padding: 40px;
+}
+
+.all-playlists .playlists{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.all-playlists .playlists .playlist{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    height: 300px;
+    margin: 20px;
+    border:8px solid black;
+    -webkit-box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
+}
+
+.all-playlists .playlists .playlist h1{
+    align-self: center;
+}
+.all-playlists .playlists .playlist:hover{
+    background: wheat;
+    cursor: pointer;
+}
+
+.all-songs{
+    padding: 40px;
+}
+
+.all-songs .songs{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.all-songs .songs .song{
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+    min-width: 200px;
+    min-height: 70px;
+    margin: 20px;
+    border:4px solid black;
+    -webkit-box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 19px -10px rgba(0,0,0,0.75);
+}
+
+.all-songs .songs .song:hover{
+    background: lightgrey;
+    cursor: pointer;
+}
+
+select{
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.delete-song{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    color:white;
+    height: 30px;
+    top:0;
+    right: 0;
+    background-color: rgb(256,0,0,0.2);
+}
+
+.delete-song:hover{
+    background-color: rgb(256,0,0,0.9);
+}
+
+.user-info{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-info button{
+    padding: 10px 20px;
+    background-color: black;
+    color:white;
+}
+
+h3{
+    display: inline-flex;
+    margin-right:20px ;
+}
