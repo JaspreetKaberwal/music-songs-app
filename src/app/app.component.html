@@ -1,1 +1,51 @@
+<!-- Header section -->
+<header class="header-section clearfix">
+    <a routerLink="/main" routerLinkActive="active" class="site-logo">
+        <img src="../../assets/img/logo.png" alt="">
+    </a>
+    <div class="header-right">
+        <div class="user-panel">
+            <a routerLink="/login" routerLinkActive="active">Login</a>
+            <span>|</span>
+            <a routerLink="/signup" routerLinkActive="active">Sign UP</a>
+        </div>
+    </div>
+    <ul class="main-menu">
+        <li><a routerLink="/main" routerLinkActive="active">Main</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+    </ul>
+</header>
+<!-- Header section end -->
+
+<!--Test Navigation
+<div class="container">
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+        <ul class="navbar-nav">
+
+            <li class="nav-item">
+                <button class="m-1 btn btn-light btn-outline-primary" Buttonlabel="Main" (click)="main()" >
+                    Main
+                </button>
+            </li>
+            <li class="nav-item">
+                <button class="m-1 btn btn-light btn-outline-primary" Buttonlabel="Login" (click)="login()" >
+                    Login
+                </button>
+            </li>
+
+            <li class="nav-item">
+                    <button class="m-1 btn btn-light btn-outline-primary" Buttonlabel="Signup" (click)="signup()" >
+                        Signup
+                    </button>
+                </li>
+
+            <li class="nav-item">
+                <button class="m-1 btn btn-light btn-outline-primary" Buttonlabel="Contact" (click)="contact()" >
+                    Contact
+                </button>
+            </li>
+        </ul>
+    </nav>
+</div>
+-->
 <router-outlet></router-outlet>

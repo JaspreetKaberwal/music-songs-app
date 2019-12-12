@@ -3,14 +3,13 @@ import { ApiCallsService } from '../api-calls.service';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  selector: 'app-signup',
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.scss']
 })
-export class LoginComponent implements OnInit {
+export class SignupComponent implements OnInit {
   password: string;
   username: string;
-  error:string;
 
   constructor(private api: ApiCallsService, private router: Router) {
     let user = localStorage.getItem('user')
@@ -31,15 +30,17 @@ export class LoginComponent implements OnInit {
     return true;
   }
 
-  login() {
+  signUp() {
     if(!this.validate()) return
-    this.api.login(this.username, this.password).subscribe((resp: any) => {
+    this.api.signUp(this.username, this.password).subscribe((resp: any) => {
       if (resp.success) {
-        localStorage.setItem('user', JSON.stringify(resp.user))
+        localStorage.setItem('user', JSON.stringify({
+          username: this.username,
+          password: this.password
+        }))
         this.router.navigate(['home']);
-      }else{
-        this.error = 'incorrect username/password'
       }
     })
   }
+
 }

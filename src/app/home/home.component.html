@@ -1,43 +1,46 @@
-<div class="user-info">
-    <h3>Hello, {{username}}</h3>
-    <button (click)="logout()">Logout</button>
-</div>
-<div *ngIf="showModal" class="modal" (click)="showModal=false">
-    <div class="container" (click)="$event.stopPropagation();">
-        <input [(ngModel)]="song.name" placeholder="Song Name" />
-        <input [(ngModel)]="song.artist" placeholder="Artist" />
-        <label>Genre: </label>
-        <select [(ngModel)]="song.genre">
-            <option *ngFor="let genre of genres">{{genre}}</option>
-        </select>
-        <button class="add-song-modal" (click)="newSong()">Add Song</button>
-    </div>
-</div>
-<button class="add-song" (click)="showModal=true"><span>ADD SONG</span></button>
+<div class="main">
 
-<div class="all-playlists">
-    <h1>Genre based Playlists</h1>
-    <div class="playlists">
-        <div *ngFor="let playlist of allPlaylists" class="playlist">
-            <h1>{{playlist.genre}}</h1>
-            <div>
-                <div *ngFor="let song of playlist.songs;let i=index">
-                    {{i+1}}) {{song.name}}
+        <div class="user-info">
+                <h3>User: {{username}}</h3>
+                <button (click)="logout()">Logout</button>
+            </div>
+            <div *ngIf="showModal" class="modal" (click)="showModal=false">
+                <div class="container" (click)="$event.stopPropagation();">
+                    <input [(ngModel)]="song.name" placeholder="Song Name" />
+                    <input [(ngModel)]="song.artist" placeholder="Artist" />
+                    <label>Genre: </label>
+                    <select [(ngModel)]="song.genre">
+                        <option *ngFor="let genre of genres">{{genre}}</option>
+                    </select>
+                    <button class="add-song-modal" (click)="newSong()">Add Song</button>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="all-songs">
-    <h1>My Songs</h1>
-    <div class="songs">
-        <div *ngFor="let song of allSongs" class="song">
-            <div class="delete-song" (click)="deleteSong(song._id)">X</div>
-            <h1>{{song.name}}</h1>
-            <h6>Artist: {{song.artist}}</h6>
-            <h6>Genre: {{song.genre}}</h6>
-        </div>
-    </div>
+            <button class="add-song" (click)="showModal=true"><span>ADD SONG</span></button>
+            
+            <div class="all-playlists">
+                <h1>Genre based Playlists</h1>
+                <div class="playlists">
+                    <div *ngFor="let playlist of allPlaylists" class="playlist">
+                        <h1>{{playlist.genre}}</h1>
+                        <div>
+                            <div *ngFor="let song of playlist.songs;let i=index">
+                                {{i+1}}) {{song.name}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="all-songs">
+                <h1>My Songs</h1>
+                <div class="songs">
+                    <div *ngFor="let song of allSongs" class="song">
+                        <div class="delete-song" (click)="deleteSong(song._id)">X</div>
+                        <h1>{{song.name}}</h1>
+                        <h6>Artist: {{song.artist}}</h6>
+                        <h6>Genre: {{song.genre}}</h6>
+                    </div>
+                </div>
+            </div>
 </div>

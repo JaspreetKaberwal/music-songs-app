@@ -1,12 +1,12 @@
 <div class="wrapper">
-    <img class="head-image" src="assets/login.png"/>
+    <img class="head-image" src="assets/signup.jpg"/>
     <div class="form">
-        <h1>Login to amazing music</h1>
+        <h1>Sign Up to amazing music</h1>
         <input [(ngModel)]="username" type="text" placeholder="Username"/>
         <input [(ngModel)]="password" type="password" placeholder="Password"/>
         <span *ngIf="error" style="color:red">{{error}}</span>
         <div class="buttons">
-            <button (click)="login()">Login</button>
+            <button (click)="signUp()">Signup</button>
         </div>
     </div>
 </div>
